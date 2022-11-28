@@ -6,4 +6,8 @@
   .button{
     @apply inline-block bg-blue-700 py-4 px-8 text-white rounded-lg hover:bg-blue-800 font-semibold capitalize
   }
+
+  .input-field{
+    @apply outline-none w-full border-2 px-2 py-1 rounded border-gray-300 focus:border-blue-600
+  }
 }

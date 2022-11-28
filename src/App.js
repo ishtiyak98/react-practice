@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Form from "./examples/Form";
 import UseEffect from "./useEffect/UseEffect";
 import UseMemo from "./useMemo/UseMemo";
 import UseReducer from "./useReducer/UseReducer";
@@ -19,7 +20,8 @@ function App() {
           {show ? "Hide useEffect" : "Show useEffect"}
         </button>
       </center> */}
-      <UseReducer></UseReducer>
+      {/* <UseReducer></UseReducer> */}
+      <Form></Form>
     </>
   );
 }

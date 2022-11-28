@@ -5,9 +5,9 @@ const UseReducer = () => {
 
   const reducer = (prevState, action) => {
     if (action.type === "INCREASE") {
-      return prevState + 1;
+      return prevState + action.payload.count;
     } else if (action.type === "DECREASE") {
-      return prevState - 1;
+      return prevState - action.payload.count;
     }
   };
 
@@ -18,8 +18,22 @@ const UseReducer = () => {
       <div className="bg-white shadow-xl p-10 rounded-lg space-y-8">
         <p className="text-2xl text-center">{state}</p>
         <div className="space-x-8">
-          <button className="button" onClick={()=> dispatch({type:"INCREASE"})}>increase</button>
-          <button className="button" onClick={()=> dispatch({type:"DECREASE"})}>decrease</button>
+          <button
+            className="button"
+            onClick={() =>
+              dispatch({ type: "INCREASE", payload: { count: 5 } })
+            }
+          >
+            increase
+          </button>
+          <button
+            className="button"
+            onClick={() =>
+              dispatch({ type: "DECREASE", payload: { count: 5 } })
+            }
+          >
+            decrease
+          </button>
         </div>
       </div>
     </div>
